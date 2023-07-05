@@ -1,0 +1,4 @@
+.gamePanels  {
+    display: flex;
+    justify-content: space-evenly;
+}
