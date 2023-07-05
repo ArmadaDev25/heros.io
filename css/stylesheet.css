@@ -2,10 +2,14 @@
     display: flex;
     justify-content: space-evenly;
 }
+/*Makes the 2 game panels take up the entire page*/
 .panel{
     flex-grow: 1;
 }
 #action-panel{
     display: flex;
     flex-direction: column;
+}
+#actions-title{
+    text-align: center;
 }
