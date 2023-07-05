@@ -1,3 +1,4 @@
+/*Creates a flex box to allow the 2 game panels to display in line with each other*/
 .gamePanels  {
     display: flex;
     justify-content: space-evenly;
