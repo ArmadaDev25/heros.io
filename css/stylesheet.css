@@ -2,3 +2,10 @@
     display: flex;
     justify-content: space-evenly;
 }
+.panel{
+    flex-grow: 1;
+}
+#action-panel{
+    display: flex;
+    flex-direction: column;
+}
