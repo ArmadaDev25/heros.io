@@ -14,3 +14,9 @@
 #actions-title{
     text-align: center;
 }
+
+/*CSS for the created hero UI elements*/
+.hero-info{
+    display: flex;
+    justify-content: space-evenly;
+}
