@@ -16,6 +16,12 @@ class Hero{
 }
 
 
+// Function that will be called in order to create a new hero
+function generateHero(){
+    generateHeroUI() // When a hero is generated, an HTML element will be created to show the hero stats
+}
+
+
 // Creates a new HTML element that will hold the information on the newly created hero
 function generateHeroUI(){
     const newElement = document.createElement("article") // Creates a new container element for the Hero information
