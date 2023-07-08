@@ -1,6 +1,7 @@
 // DEBUG to make sure the JS file is linked to the HTML fileS
 console.log('App is running and linked')
 
+// Debug
 generateHeroUI(100, "brad")
 
 class GameLogic {
@@ -9,12 +10,21 @@ class GameLogic {
 }
 
 class Hero{
-    constructor(name){
+    constructor(name, health, damage){
         this.name = name
+        this.health = health
+        this.damage = damage
     }
     
 }
 
+class NPC{
+    constructor(name, health, damage){
+        this.name = name
+        this.health = health
+        this.damage = damage
+    }
+}
 
 // Function that will be called in order to create a new hero
 function generateHero(){
