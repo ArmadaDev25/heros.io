@@ -2,7 +2,7 @@
 console.log('App is running and linked')
 
 // Debug
-generateHeroUI(100, "brad")
+generateHero(100, "brad")
 
 class GameLogic {
     renown = 0
@@ -26,9 +26,14 @@ class NPC{
     }
 }
 
+// On click event that will create the player's first hero and start the game
+
+
+
+
 // Function that will be called in order to create a new hero
-function generateHero(){
-    generateHeroUI() // When a hero is generated, an HTML element will be created to show the hero stats
+function generateHero(health, name){
+    generateHeroUI(health, name) // When a hero is generated, an HTML element will be created to show the hero stats
 }
 
 
