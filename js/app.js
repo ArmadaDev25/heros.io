@@ -3,9 +3,9 @@ console.log('App is running and linked')
 
 
 
-class GameLogic {
-    renown = 0 // This is essentially the players score 
-    currency = 0
+PlayerStats = {
+    renown: 0, // This is essentially the players score 
+    currency: 0
 }
 
 class Hero{
