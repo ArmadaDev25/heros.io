@@ -1,11 +1,10 @@
 // DEBUG to make sure the JS file is linked to the HTML fileS
 console.log('App is running and linked')
 
-// Debug
-generateHero(100, "brad")
+
 
 class GameLogic {
-    renown = 0
+    renown = 0 // This is essentially the players score 
     currency = 0
 }
 
@@ -15,6 +14,9 @@ class Hero{
         this.health = health
         this.damage = damage
     }
+
+    // Heroes will add to the passive generation of renown
+    renownToGenerate = 1
     
 }
 
@@ -27,9 +29,15 @@ class NPC{
 }
 
 // On click event that will create the player's first hero and start the game
+document.getElementById("gameStartBtn").addEventListener("click", startGame)
 
+//Start Game function
+function startGame(){
+    generateHero(100, "Karma")
+    generateRecentEventText("The Adventure Begins") // First event that displays telling the player the game has started
+    console.log("Game Has Started")
 
-
+}
 
 // Function that will be called in order to create a new hero
 function generateHero(health, name){
@@ -56,4 +64,14 @@ function generateHeroUI(health, name){
     const heroUISection = document.getElementById("player-heroes")
     heroUISection.appendChild(newElement)
     
+}
+
+// Function that will generate HTML elements what detail recent game events in the Recent Events panel
+function generateRecentEventText(Text){
+    const newElement = document.createElement("p")
+    const newElText = document.createTextNode(Text)
+    newElement.appendChild(newElText)
+
+    const notifSection = document.getElementById("recent-actions")
+    notifSection.appendChild(newElement)
 }

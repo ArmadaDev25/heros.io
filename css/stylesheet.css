@@ -1,3 +1,14 @@
+/*Top of Page Title Styling*/
+.title{
+    display: flex;
+}
+#resources{
+    display: flex;
+}
+.rUI{
+    display: flex;
+}
+/*Game Panel Styling*/
 /*Creates a flex box to allow the 2 game panels to display in line with each other*/
 .gamePanels  {
     display: flex;

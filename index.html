@@ -13,13 +13,25 @@
         <img src="./images/Heros.png" alt="Heros.IO Logo">
         <h1>Name your first hero to begin your adventure!</h1>
         <input>
-        <input type="button">
+        <input type="button" id="gameStartBtn" value="Start Journey">
     </section>
     
     <!-- Main Game Elements-->
     <!-- Will need to make 4 areas for the various elements. Title, heroes, actions, and events -->
     <section class = "title">
-        <img src="./images/Heros.png" alt="Heros.IO Logo">
+        <img src="./images/Heros.png" alt="Heros.IO Logo" id="title-logo">
+        <article id="resources">
+            <div class="rUI">
+                <p>Renown: </p>
+                <p id="rnum"> 0</p>
+
+            </div>
+            <div class="rUI">
+                <p>Currency: </p>
+                <p id="cnum"> 0</p>
+            </div>
+
+        </article>
 
     </section>
     
@@ -27,12 +39,10 @@
         <!-- This Panel will hold the Heroes and events -->
         <section class ="panel">
             <h1 class="sub-text-heading">Your Heroes</h1>
-            <article id ="player-heroes">
-                
+            <article id ="player-heroes">    
             </article>
             <h1 class="sub-text-heading">Recent Events</h1>   
-            <article>
-                  
+            <article id="recent-actions">     
             </article>        
         </section>
         <!-- This Panel will hold the Actions-->
