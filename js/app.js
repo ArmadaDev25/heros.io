@@ -33,10 +33,16 @@ document.getElementById("gameStartBtn").addEventListener("click", startGame)
 
 //Start Game function
 function startGame(){
-    generateHero(100, "Karma")
+    generateHero(100, getValueFromInputField("HNIone"))
     generateRecentEventText("The Adventure Begins") // First event that displays telling the player the game has started
     console.log("Game Has Started")
 
+}
+
+// gets the input from the given field and returns it
+function getValueFromInputField(elementID){
+    let userInput = document.getElementById(elementID).value
+    return userInput
 }
 
 // Function that will be called in order to create a new hero
