@@ -5,7 +5,8 @@ console.log('App is running and linked')
 
 PlayerStats = {
     renown: 0, // This is essentially the players score 
-    currency: 0
+    currency: 0,
+    heroes: []
 }
 
 class Hero{
