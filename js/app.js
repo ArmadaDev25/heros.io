@@ -10,6 +10,15 @@ PlayerStats = {
     nextHeroID: 0
 }
 
+// Array that will hold Enemies
+let enemies = []
+
+// Ammount of renown to generate per tick
+let renownPerTick = 0
+
+
+
+// Classes for generating Heroes and NPCs 
 class Hero{
     constructor(name, health, damage, hid){
         this.name = name
@@ -94,4 +103,9 @@ function generateRecentEventText(Text){
 
     const notifSection = document.getElementById("recent-actions")
     notifSection.appendChild(newElement)
+}
+
+// Function that will generate NPC
+function generateNPC(){
+
 }
