@@ -6,18 +6,25 @@ console.log('App is running and linked')
 PlayerStats = {
     renown: 0, // This is essentially the players score 
     currency: 0,
-    heroes: []
+    heroes: [],
+    nextHeroID: 0
 }
 
 class Hero{
-    constructor(name, health, damage){
+    constructor(name, health, damage, hid){
         this.name = name
         this.health = health
         this.damage = damage
+        this.heroID = hid
     }
 
     // Heroes will add to the passive generation of renown
     renownToGenerate = 1
+
+    updateHealth(){
+        let healthUI = document.getElementById(this.hid)
+        healthUI.innerText = this.health
+    }
     
 }
 
@@ -48,7 +55,13 @@ function getValueFromInputField(elementID){
 
 // Function that will be called in order to create a new hero
 function generateHero(health, name){
+    PlayerStats.heroes.push(new Hero(name,health,25,PlayerStats.nextHeroID))
+    console.log(PlayerStats.heroes)
     generateHeroUI(health, name) // When a hero is generated, an HTML element will be created to show the hero stats
+    PlayerStats.nextHeroID++ // imcrements the nextHeroID variable allowing the next hero that is created to have an ID that is 1 higher than the previous
+    console.log(PlayerStats)
+
+    
 }
 
 
