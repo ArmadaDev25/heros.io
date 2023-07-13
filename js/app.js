@@ -109,3 +109,8 @@ function generateRecentEventText(Text){
 function generateNPC(){
 
 }
+
+function goOnQuest(){
+    // Awards the player Currency
+    // Awards the player Renowm
+}
