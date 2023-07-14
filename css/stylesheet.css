@@ -1,5 +1,5 @@
 /*Top of Page Title Styling*/
-.title{
+#title{
     display: flex;
 }
 #resources{
@@ -10,7 +10,7 @@
 }
 /*Game Panel Styling*/
 /*Creates a flex box to allow the 2 game panels to display in line with each other*/
-.gamePanels  {
+#gamePanels  {
     display: flex;
     justify-content: space-evenly;
 }

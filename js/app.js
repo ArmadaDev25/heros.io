@@ -2,7 +2,6 @@
 console.log('App is running and linked')
 
 
-
 PlayerStats = {
     renown: 0, // This is essentially the players score 
     currency: 0,
@@ -53,6 +52,8 @@ function startGame(){
     generateHero(100, getValueFromInputField("HNIone"))
     generateRecentEventText("The Adventure Begins") // First event that displays telling the player the game has started
     console.log("Game Has Started")
+    
+    displayGame()
 
     // Generate Orks
     generateNPC()
@@ -133,14 +134,16 @@ function generateNPC(){
     newElement.appendChild(newOrkHealth)
     newElement.appendChild(newOrkBtn)
     OrkParEl.appendChild(newElement)
-
-   
-    
-    
-
 }
 
 function goOnQuest(){
     // Awards the player Currency
     // Awards the player Renowm
+}
+
+function displayGame(){
+    let game = document.getElementById("game")
+    let introScreen = document.getElementById("sScreen")
+    game.removeAttribute("hidden")
+    introScreen.setAttribute("hidden")
 }

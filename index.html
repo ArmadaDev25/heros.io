@@ -8,17 +8,19 @@
 </head>
 <body>
     <!--  This is the element that users will see upon entering the site. This will direct them to name their first hero in order to start  -->
-    <section class="start-screen">
+    <div id="sScreen">
+    <section id ="start-screen">
         <!--Title screen will show the game title-->
         <img src="./images/Heros.png" alt="Heros.IO Logo">
         <h1>Name your first hero to begin your adventure!</h1>
         <input id="HNIone">
         <input type="button" id="gameStartBtn" value="Start Journey">
     </section>
-    
+    </div>
     <!-- Main Game Elements-->
     <!-- Will need to make 4 areas for the various elements. Title, heroes, actions, and events -->
-    <section class = "title">
+    <div hidden id="game">
+    <section id ="title">
         <img src="./images/Heros.png" alt="Heros.IO Logo" id="title-logo">
         <article id="resources">
             <div class="rUI">
@@ -35,7 +37,7 @@
 
     </section>
     
-    <section class = "gamePanels">
+    <section id = "gamePanels">
         <!-- This Panel will hold the Heroes and events -->
         <section class ="panel">
             <h1 class="sub-text-heading">Your Heroes</h1>
@@ -57,6 +59,7 @@
             
         </section>
     </section>
+    </div>
 
     <section>
         <h3>Heros.IO Dev Team</h3>
