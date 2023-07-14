@@ -145,5 +145,5 @@ function displayGame(){
     let game = document.getElementById("game")
     let introScreen = document.getElementById("sScreen")
     game.removeAttribute("hidden")
-    introScreen.setAttribute("hidden")
+    introScreen.setAttribute("hidden", "is-hidden")
 }
