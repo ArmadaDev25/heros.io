@@ -31,3 +31,9 @@
     display: flex;
     justify-content: space-evenly;
 }
+
+/*CSS for the created ORK UI elements*/
+.orkEl{
+    display: flex;
+    justify-content: space-evenly;
+}

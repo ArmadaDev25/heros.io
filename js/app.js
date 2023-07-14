@@ -54,6 +54,9 @@ function startGame(){
     generateRecentEventText("The Adventure Begins") // First event that displays telling the player the game has started
     console.log("Game Has Started")
 
+    // Generate Orks
+    generateNPC()
+
 }
 
 // gets the input from the given field and returns it
@@ -107,6 +110,33 @@ function generateRecentEventText(Text){
 
 // Function that will generate NPC
 function generateNPC(){
+    // Generate the HTML element that contains the Info for the Ork
+    const newElement = document.createElement("article")
+    newElement.setAttribute("class", "orkEl")
+    // Get the HTML element that the Ork Element will be a child of
+    const OrkParEl = document.getElementById("orks")
+    // Creates the Ork Name HTML element
+    const newOrkName = document.createElement("p")
+    const newOrkNameTxt = document.createTextNode("Ork Warrior")
+    // Creates the button element
+    const newOrkBtn = document.createElement("input")
+    newOrkBtn.setAttribute("type", "button")
+    newOrkBtn.setAttribute("value", "Fight")
+    // Creates the health element
+    const newOrkHealth = document.createElement("p")
+    const newOrkHealthTxt = document.createTextNode("100")
+
+    
+    newOrkName.appendChild(newOrkNameTxt)
+    newElement.appendChild(newOrkName)
+    newOrkHealth.appendChild(newOrkHealthTxt)
+    newElement.appendChild(newOrkHealth)
+    newElement.appendChild(newOrkBtn)
+    OrkParEl.appendChild(newElement)
+
+   
+    
+    
 
 }
 
