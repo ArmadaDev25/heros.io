@@ -20,6 +20,7 @@ Try out the game at https://armadadev25.github.io/heroes.io/
 <img width="1121" alt="GuildHeroesIO" src="https://github.com/ArmadaDev25/heroes.io/assets/119649188/26b11ee1-52da-4fe5-ac6e-3be3847b5ae8">
 
 # Screenshots
+<img width="759" alt="introScreen" src="https://github.com/ArmadaDev25/heroes.io/assets/119649188/2f5f3983-2bba-472c-9a91-8d50423a6e99">
 <img width="1294" alt="MainGameScr" src="https://github.com/ArmadaDev25/heroes.io/assets/119649188/d8fe5e08-3ac7-4c8a-89e2-395aa9f57967">
 
 
