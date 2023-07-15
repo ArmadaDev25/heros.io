@@ -30,6 +30,8 @@ body{
 #action-panel{
     display: flex;
     flex-direction: column;
+    background-color: #e6aa6a;
+    border-radius: 10px;
 }
 #actions-title{
     text-align: center;
