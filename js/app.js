@@ -263,6 +263,9 @@ function fightNPC(){
     
         }
 
+    } else if(isHeroDead(PlayerStats.heroes[0])== true){
+        alert("Hero Has died, Player loses")
+
     }
 
 }
