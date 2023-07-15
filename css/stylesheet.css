@@ -1,5 +1,7 @@
+body{
+    background-image: url("../images/abstract-old-grunge-stone-textures.jpg");
+}
 /*Top of Page Title Styling*/
-
 #resources{
     display: flex;
 }
