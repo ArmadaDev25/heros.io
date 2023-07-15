@@ -263,7 +263,7 @@ function fightNPC(){
     
         }
 
-    } else if(isHeroDead(PlayerStats.heroes[0])== true){
+    } else if(isHeroDead(PlayerStats.heroes[0])== true){ // if the Heroes health is less than zero, the player loses the game
         alert("Hero Has died, Player loses")
 
     }
