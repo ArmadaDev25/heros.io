@@ -9,6 +9,7 @@ PlayerStats = {
     nextHeroID: 0
 }
 
+points = 0
 // Array that will hold Enemies
 let enemies = []
 
@@ -59,6 +60,7 @@ function startGame(){
 
     // Generate Orks
     generateNPC()
+    goOnQuest()
 
 }
 
@@ -148,7 +150,7 @@ function displayGame(){
 
 // Updates the text of a HTML element 
 function uiElementUpdater(id, value){
-    elementToUpdate = document.getElementById(id)
+    let elementToUpdate = document.getElementById(id)
     elementToUpdate.innerText = value
 }
 
@@ -156,10 +158,11 @@ function uiElementUpdater(id, value){
 function goOnQuest(){
     // Awards the player Renowm
     PlayerStats.renown = PlayerStats.renown + 100
-    uiElementUpdater(rnum, PlayerStats.renown)
+    uiElementUpdater("rnum", PlayerStats.renown )
 
     // Awards the player Currency
     PlayerStats.currency = PlayerStats.currency + 100
+    uiElementUpdater("cnum", PlayerStats.currency)
     console.log(PlayerStats)
     // generates the text notification text that pops up when the player goes on a quest
     generateRecentEventText("Our Heroes Embark on a quest and recive")
