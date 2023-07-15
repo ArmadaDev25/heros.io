@@ -3,9 +3,13 @@
 Try out the game at https://armadadev25.github.io/heroes.io/
 
 # Features
-- Name anDs create your own hero
+- Name ands create your own hero
 - Battle against Orks in 1 vs 1 battles
 - Gain Renown and Currency by going on quests and battling orks
+- Win the game by accruing a total of 1000 renown
+- Players will lose the game if their hero is reduced to 0 health
+- Start screen that first appears when the player starts the game.
+- The start screen is where the player can name their hero
 
 # Technologies Used
 - JavaScript - This controls the game's logic and generates multiple HTML elements dynamically
