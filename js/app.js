@@ -15,6 +15,7 @@ let enemies = []
 
 // Ammount of renown to generate per tick
 let renownPerTick = 0
+let renownToWin = 1000
 
 
 
@@ -200,15 +201,29 @@ function fightNPC(){
     enemies[0].takeDamage(PlayerStats.heroes[0].damage)
     enemies[0].updateHealthUI("o1")
     
-    // Figures out if the ork has died or not
-    if(enemies[0].health <= 0){
-        generateRecentEventText("The Hero has killed the Ork")// Message that is displayed if the ork dies
-        giveReward(50,100) // Player should recive a larger reward for killing the ork than they would if they just damaged the ork
 
-    }else if (enemies[0].health > 0){
-        generateRecentEventText("Hero fought the ork and dealt " + PlayerStats.heroes[0].damage + " damage to the ork")// Message that is displayed if the ork does not die
-        giveReward(10,0) // Player should recive a smaller reward for damaging the ork than they would from Killing the Ork
+    if(isHeroDead(PlayerStats.heroes[0])!== true){
+        generateRecentEventText("The Hero has survived the battle with " + PlayerStats.heroes[0].health + " health remaining." )
+
+        if(enemies[0].health <= 0){
+            generateRecentEventText("The Hero has killed the Ork")// Message that is displayed if the ork dies
+            giveReward(50,100) // Player should recive a larger reward for killing the ork than they would if they just damaged the ork
+    
+        }else if (enemies[0].health > 0){
+            generateRecentEventText("Hero fought the ork and dealt " + PlayerStats.heroes[0].damage + " damage to the ork")// Message that is displayed if the ork does not die
+            giveReward(10,0) // Player should recive a smaller reward for damaging the ork than they would from Killing the Ork
+    
+        }
 
     }
-    
+
+}
+
+// Checks to see if a hero is dead, and returns the result as a boolean
+function isHeroDead(heroinput){
+    if (heroinput.health <= 0){
+        return true
+    }else{
+        return false
+    }
 }
