@@ -171,8 +171,8 @@ function uiElementUpdater(id, value){
 function goOnQuest(){
     // Awards the player Renowm
     PlayerStats.renown = PlayerStats.renown + 100
-    uiElementUpdater("rnum", PlayerStats.renown )
-
+    uiElementUpdater("rnum", PlayerStats.renown)
+    
     // Awards the player Currency
     PlayerStats.currency = PlayerStats.currency + 100
     uiElementUpdater("cnum", PlayerStats.currency)
@@ -184,7 +184,6 @@ function goOnQuest(){
 // Fighting NPC logic
 function fightNPC(){
     //Hero takes damage
-
     PlayerStats.heroes[0].takeDamage(5)
     PlayerStats.heroes[0].updateHealthUI("0")
 }
