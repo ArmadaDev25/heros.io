@@ -47,6 +47,8 @@ class NPC{
 // On click event that will create the player's first hero and start the game
 document.getElementById("gameStartBtn").addEventListener("click", startGame)
 
+
+
 //Start Game function
 function startGame(){
     generateHero(100, getValueFromInputField("HNIone"))
@@ -136,14 +138,29 @@ function generateNPC(){
     OrkParEl.appendChild(newElement)
 }
 
-function goOnQuest(){
-    // Awards the player Currency
-    // Awards the player Renowm
-}
 
 function displayGame(){
     let game = document.getElementById("game")
     let introScreen = document.getElementById("sScreen")
     game.removeAttribute("hidden")
     introScreen.setAttribute("hidden", "is-hidden")
+}
+
+// Updates the text of a HTML element 
+function uiElementUpdater(id, value){
+    elementToUpdate = document.getElementById(id)
+    elementToUpdate.innerText = value
+}
+
+// Game Logic Functions
+function goOnQuest(){
+    // Awards the player Renowm
+    PlayerStats.renown = PlayerStats.renown + 100
+    uiElementUpdater(rnum, PlayerStats.renown)
+
+    // Awards the player Currency
+    PlayerStats.currency = PlayerStats.currency + 100
+    console.log(PlayerStats)
+    // generates the text notification text that pops up when the player goes on a quest
+    generateRecentEventText("Our Heroes Embark on a quest and recive")
 }
