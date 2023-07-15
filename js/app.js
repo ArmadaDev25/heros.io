@@ -54,6 +54,12 @@ class NPC{
     takeDamage(damage){
         this.health = this.health - damage
     }
+
+    updateHealthUI(input){
+        
+        let healthUI = document.getElementById(input)
+        healthUI.innerText = this.health
+    }
 }
 
 // On click event that will create the player's first hero and start the game
@@ -143,6 +149,8 @@ function generateNPC(){
     newOrkBtn.setAttribute("value", "Fight")
     // Creates the health element
     const newOrkHealth = document.createElement("p")
+    newOrkHealth.setAttribute("id", "o" + enemies.length)
+
     const newOrkHealthTxt = document.createTextNode("100")
 
     
@@ -187,4 +195,7 @@ function fightNPC(){
     //Hero takes damage
     PlayerStats.heroes[0].takeDamage(enemies[0].damage)
     PlayerStats.heroes[0].updateHealthUI("0")
+    enemies[0].takeDamage(PlayerStats.heroes[0].damage)
+    enemies[0].updateHealthUI("o1")
+
 }
