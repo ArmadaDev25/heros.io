@@ -79,7 +79,7 @@ function startGame(){
     // Generate Orks
     generateNPC()
     document.getElementById("ob1").addEventListener("click", fightNPC)
-    goOnQuest()
+    
    
 
 }
@@ -189,8 +189,6 @@ function giveReward(rReward, cReward){
     PlayerStats.currency = PlayerStats.currency + cReward
     uiElementUpdater("cnum", PlayerStats.currency)
     console.log(PlayerStats)
-    // generates the text notification text that pops up when the player goes on a quest
-    generateRecentEventText("Our Heroes Embark on a quest and are rewarded")
 }
 
 // Fighting NPC logic
