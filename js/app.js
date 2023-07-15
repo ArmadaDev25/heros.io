@@ -173,8 +173,10 @@ function generateNPC(){
 function displayGame(){
     let game = document.getElementById("game")
     let introScreen = document.getElementById("sScreen")
+    let gameCredits = document.getElementById("credcon")
     game.removeAttribute("hidden")
     introScreen.setAttribute("hidden", "is-hidden")
+    gameCredits.setAttribute("hidden", "is-hidden")
 }
 
 // Updates the text of a HTML element 

@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
 body{
     background-image: url("../images/abstract-old-grunge-stone-textures.jpg");
+    font-family: 'Abel', sans-serif;
 }
 /*Top of Page Title Styling*/
 #resources{
@@ -53,7 +55,7 @@ body{
 
 }
 .ra-panel{
-    position: fixed;
+    position: relative;
     top: 50%;
     left: 0;
 }
