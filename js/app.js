@@ -185,6 +185,6 @@ function goOnQuest(){
 // Fighting NPC logic
 function fightNPC(){
     //Hero takes damage
-    PlayerStats.heroes[0].takeDamage(5)
+    PlayerStats.heroes[0].takeDamage(enemies[0].damage)
     PlayerStats.heroes[0].updateHealthUI("0")
 }
