@@ -128,6 +128,7 @@ function generateRecentEventText(Text){
 
 // Function that will generate NPC
 function generateNPC(){
+    enemies.push(new NPC("Ork Warrior",100,5))
     // Generate the HTML element that contains the Info for the Ork
     const newElement = document.createElement("article")
     newElement.setAttribute("class", "orkEl")
