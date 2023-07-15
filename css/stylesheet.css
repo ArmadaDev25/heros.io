@@ -32,6 +32,7 @@ body{
     flex-direction: column;
     background-color: #e6aa6a;
     border-radius: 10px;
+    margin: 1.5%;
 }
 #actions-title{
     text-align: center;
@@ -79,3 +80,7 @@ body{
     
 }
 
+#title-logo{
+    width: 50%;
+    height: auto;
+}
