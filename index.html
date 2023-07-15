@@ -20,7 +20,7 @@
     <!-- Main Game Elements-->
     <!-- Will need to make 4 areas for the various elements. Title, heroes, actions, and events -->
     <div hidden id="game">
-    <section id ="title">
+    <section class="gamePanels" id ="title">
         <img src="./images/Heros.png" alt="Heros.IO Logo" id="title-logo">
         <article id="resources">
             <div class="rUI">
@@ -40,28 +40,35 @@
     <section id = "gamePanels">
         <!-- This Panel will hold the Heroes and events -->
         <section class ="panel">
-            <h1 class="sub-text-heading">Your Heroes</h1>
-            <article id ="player-heroes">    
-            </article>
-            <h1 class="sub-text-heading">Recent Events</h1>   
-            <article id="recent-actions">     
-            </article>        
+            <div class="yh-subpanel">
+                <h1 class="sub-text-heading">Your Heroes</h1>
+                <article id ="player-heroes">    
+                </article>
+            </div>
+            <div class="ra-panel">
+                <h1 class="sub-text-heading">Recent Events</h1>   
+                <article id="recent-actions">     
+                </article>
+            </div>        
         </section>
         <!-- This Panel will hold the Actions-->
         <section class ="panel" id="action-panel">
             <h1 class="sub-text-heading" id ="actions-title">Avalible Quests</h1>
             <!-- These buttons are to run the avalible quests -->
             <!-- Pusshing these buttons will cause the player to send his heroes on a quest-->
-            <input type ="button">
-            <input type ="button">
-            <input type ="button">
+            <p>Patrol the Town</p>
+            <input type ="button" value="Run Quest" id="qbtn1">
+            <p>Save a Cat From A Tree</p>
+            <input type ="button" value="Run Quest" id="qbtn2">
+            <p>Investigate a Crime Scene</p>
+            <input type ="button" value="Run Quest" id="qbtn3">
             <h1 class="sub-text-heading" id="orks">Ork Incursions</h1>
             
         </section>
     </section>
     </div>
 
-    <section>
+    <section id="credits">
         <h3>Heros.IO Dev Team</h3>
         <p>Engineering and Design: John "ArmadaDev25"</p>
         <p>UI Art: James Goddard</p>

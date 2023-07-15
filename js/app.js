@@ -65,6 +65,9 @@ class NPC{
 
 // On click event that will create the player's first hero and start the game
 document.getElementById("gameStartBtn").addEventListener("click", startGame)
+document.getElementById("qbtn1").addEventListener("click", doQuestOne)
+document.getElementById("qbtn2").addEventListener("click", doQuestTwo)
+document.getElementById("qbtn3").addEventListener("click", doQuestThree)
 
 
 
@@ -97,6 +100,7 @@ function generateHero(health, name){
     generateHeroUI(health, name, PlayerStats.nextHeroID) // When a hero is generated, an HTML element will be created to show the hero stats
     PlayerStats.nextHeroID++ // imcrements the nextHeroID variable allowing the next hero that is created to have an ID that is 1 higher than the previous
     console.log(PlayerStats)
+    renownPerTick = PlayerStats.heroes[0].renownPerTick
 
     
 }
@@ -179,7 +183,43 @@ function uiElementUpdater(id, value){
     elementToUpdate.innerText = value
 }
 
-// Game Logic Functions
+
+
+
+// Game Logic
+
+// Preset Quest Logic
+function doQuestOne(){
+    giveReward(20, 100)
+    if(PlayerStats.renown >= renownToWin){
+        console.log("Player Has won")
+        alert("Player Wins")
+    }
+    generateRecentEventText("Quest Complete")
+
+}
+
+function doQuestTwo(){
+    giveReward(10, 5)
+    if(PlayerStats.renown >= renownToWin){
+        console.log("Player Has won")
+        alert("Player Wins")
+    }
+    generateRecentEventText("Quest Complete")
+
+
+}
+
+function doQuestThree(){
+    giveReward(40, 25)
+    if(PlayerStats.renown >= renownToWin){
+        console.log("Player Has won")
+        alert("Player Wins")
+    }
+    generateRecentEventText("Quest Complete")
+}
+
+// Game Reward Logic
 function giveReward(rReward, cReward){
     // Awards the player Renowm
     PlayerStats.renown = PlayerStats.renown + rReward
@@ -198,18 +238,26 @@ function fightNPC(){
     PlayerStats.heroes[0].updateHealthUI("0")
     enemies[0].takeDamage(PlayerStats.heroes[0].damage)
     enemies[0].updateHealthUI("o1")
-    
+    // Check to see if the player has won
+    if(PlayerStats.renown >= renownToWin){
+        console.log("Player Has won")
+        alert("Player Wins")
+    }
+
 
     if(isHeroDead(PlayerStats.heroes[0])!== true){
         generateRecentEventText("The Hero has survived the battle with " + PlayerStats.heroes[0].health + " health remaining." )
 
         if(enemies[0].health <= 0){
             generateRecentEventText("The Hero has killed the Ork")// Message that is displayed if the ork dies
-            giveReward(50,100) // Player should recive a larger reward for killing the ork than they would if they just damaged the ork
+            giveReward(100,100) // Player should recive a larger reward for killing the ork than they would if they just damaged the ork
+            // Resets the enemies health to 100 as if they are fighting a new ork
+            enemies[0].health = 100
+            enemies[0].updateHealthUI("o1")
     
         }else if (enemies[0].health > 0){
             generateRecentEventText("Hero fought the ork and dealt " + PlayerStats.heroes[0].damage + " damage to the ork")// Message that is displayed if the ork does not die
-            giveReward(10,0) // Player should recive a smaller reward for damaging the ork than they would from Killing the Ork
+            giveReward(20,0) // Player should recive a smaller reward for damaging the ork than they would from Killing the Ork
     
         }
 
