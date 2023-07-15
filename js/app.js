@@ -77,8 +77,9 @@ function startGame(){
 
     // Generate Orks
     generateNPC()
+    document.getElementById("ob1").addEventListener("click", fightNPC)
     goOnQuest()
-    fightNPC()
+   
 
 }
 
@@ -147,6 +148,7 @@ function generateNPC(){
     const newOrkBtn = document.createElement("input")
     newOrkBtn.setAttribute("type", "button")
     newOrkBtn.setAttribute("value", "Fight")
+    newOrkBtn.setAttribute("id", "ob" + enemies.length)
     // Creates the health element
     const newOrkHealth = document.createElement("p")
     newOrkHealth.setAttribute("id", "o" + enemies.length)
@@ -177,13 +179,13 @@ function uiElementUpdater(id, value){
 }
 
 // Game Logic Functions
-function goOnQuest(){
+function giveReward(rReward, cReward){
     // Awards the player Renowm
-    PlayerStats.renown = PlayerStats.renown + 100
+    PlayerStats.renown = PlayerStats.renown + rReward
     uiElementUpdater("rnum", PlayerStats.renown)
     
     // Awards the player Currency
-    PlayerStats.currency = PlayerStats.currency + 100
+    PlayerStats.currency = PlayerStats.currency + cReward
     uiElementUpdater("cnum", PlayerStats.currency)
     console.log(PlayerStats)
     // generates the text notification text that pops up when the player goes on a quest
@@ -197,5 +199,14 @@ function fightNPC(){
     PlayerStats.heroes[0].updateHealthUI("0")
     enemies[0].takeDamage(PlayerStats.heroes[0].damage)
     enemies[0].updateHealthUI("o1")
+    
+    // Figures out if the ork has died or not
+    if(enemies[0].health <= 0){
+        generateRecentEventText("The Hero has killed the Ork")
 
+    }else if (enemies[0].health > 0){
+        generateRecentEventText("Hero fought the ork and dealt " + PlayerStats.heroes[0].damage + " damage to the ork")
+
+    }
+    
 }
