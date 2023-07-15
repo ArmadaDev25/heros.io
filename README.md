@@ -23,6 +23,7 @@ Try out the game at https://armadadev25.github.io/heroes.io/
 This is the start screen. Players will see this once they begin playing the game. This is where they will be able to name their hero.<br>
 <br>
 <img width="759" alt="introScreen" src="https://github.com/ArmadaDev25/heroes.io/assets/119649188/2f5f3983-2bba-472c-9a91-8d50423a6e99"><br>
+<br>
 This is the main game screen. This is where the player will actually be playing the game<br>
 <br>
 <img width="1294" alt="MainGameScr" src="https://github.com/ArmadaDev25/heroes.io/assets/119649188/d8fe5e08-3ac7-4c8a-89e2-395aa9f57967">
