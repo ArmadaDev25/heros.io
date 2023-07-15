@@ -1,5 +1,7 @@
 /*Top of Page Title Styling*/
-
+.title{
+    display: flex;
+}
 #resources{
     display: flex;
 }
@@ -8,20 +10,14 @@
 }
 /*Game Panel Styling*/
 /*Creates a flex box to allow the 2 game panels to display in line with each other*/
-#gamePanels  {
+.gamePanels  {
     display: flex;
     justify-content: space-evenly;
-    align-items: stretch;
-    
 }
 /*Makes the 2 game panels take up the entire page*/
 .panel{
     flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
 }
-
 #action-panel{
     display: flex;
     flex-direction: column;
@@ -35,31 +31,3 @@
     display: flex;
     justify-content: space-evenly;
 }
-
-/*CSS for the created ORK UI elements*/
-.orkEl{
-    display: flex;
-    justify-content: space-evenly;
-}
-
-#title{
-    display: flex;
-}
-
-.yh-subpanel{
-    height: 33%;
-
-}
-.ra-panel{
-    position: fixed;
-    top: 50%;
-    left: 0;
-}
-
-#credits{
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    
-}
-
