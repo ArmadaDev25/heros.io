@@ -30,10 +30,17 @@ class Hero{
     // Heroes will add to the passive generation of renown
     renownToGenerate = 1
 
-    updateHealth(){
-        let healthUI = document.getElementById(this.hid)
+    takeDamage(damage){
+        this.health = this.health - damage
+        
+    }
+
+    updateHealthUI(input){
+        
+        let healthUI = document.getElementById(input)
         healthUI.innerText = this.health
     }
+
     
 }
 
@@ -42,6 +49,10 @@ class NPC{
         this.name = name
         this.health = health
         this.damage = damage
+    }
+
+    takeDamage(damage){
+        this.health = this.health - damage
     }
 }
 
@@ -61,6 +72,7 @@ function startGame(){
     // Generate Orks
     generateNPC()
     goOnQuest()
+    fightNPC()
 
 }
 
@@ -74,7 +86,7 @@ function getValueFromInputField(elementID){
 function generateHero(health, name){
     PlayerStats.heroes.push(new Hero(name,health,25,PlayerStats.nextHeroID))
     console.log(PlayerStats.heroes)
-    generateHeroUI(health, name) // When a hero is generated, an HTML element will be created to show the hero stats
+    generateHeroUI(health, name, PlayerStats.nextHeroID) // When a hero is generated, an HTML element will be created to show the hero stats
     PlayerStats.nextHeroID++ // imcrements the nextHeroID variable allowing the next hero that is created to have an ID that is 1 higher than the previous
     console.log(PlayerStats)
 
@@ -83,7 +95,7 @@ function generateHero(health, name){
 
 
 // Creates a new HTML element that will hold the information on the newly created hero
-function generateHeroUI(health, name){
+function generateHeroUI(health, name, hid){
     const newElement = document.createElement("article") // Creates a new container element for the Hero information
     newElement.setAttribute("class", "hero-info") // Sets the hero containers class attribute to "hero-info"
     // Creates the HTML element containing the heroes Name and adds it to the newElement containing the heroes health
@@ -93,6 +105,7 @@ function generateHeroUI(health, name){
     newElement.append(heroName)
     // Creates the HTML element containing the heroes health and adds it to the newElement containing the heroes health
     const heroHealth = document.createElement("p")
+    heroHealth.setAttribute("id", hid)
     const para1 = document.createTextNode(health)
     heroHealth.appendChild(para1)
     newElement.appendChild(heroHealth)
@@ -165,5 +178,13 @@ function goOnQuest(){
     uiElementUpdater("cnum", PlayerStats.currency)
     console.log(PlayerStats)
     // generates the text notification text that pops up when the player goes on a quest
-    generateRecentEventText("Our Heroes Embark on a quest and recive")
+    generateRecentEventText("Our Heroes Embark on a quest and are rewarded")
+}
+
+// Fighting NPC logic
+function fightNPC(){
+    //Hero takes damage
+
+    PlayerStats.heroes[0].takeDamage(5)
+    PlayerStats.heroes[0].updateHealthUI("0")
 }
