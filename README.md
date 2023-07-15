@@ -37,5 +37,6 @@ This is the main game screen. This is where the player will actually be playing 
 - Specific screens that appear when the player loses the screen. This way it is not just a notify
 - Additional web pages that explain the game and give a breif overview of the game
 - Dedicated battle screen
-- The ability to recruit auxilaries that buff various attributes of the hero
+- The ability to recruit auxillaries that buff various attributes of the hero
+- The Ability to create Multiple Heroes
  
