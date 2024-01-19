@@ -1,6 +1,6 @@
 # heroes.io Inital Prototype Documentation
 
-Try out the game at https://armadadev25.github.io/heroes.io/
+Try out the game at https://armadadev25.github.io/heros.io/
 
 ## Features
 - Name ands create your own hero
